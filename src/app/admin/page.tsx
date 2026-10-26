@@ -117,7 +117,7 @@ export default function AdminLoginPage() {
       </header>
 
       {/* Center Arched Admin Console Card */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto px-4 flex-1 flex items-center justify-center min-h-0">
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-4 flex-1 flex items-center justify-center min-h-0 -translate-y-4 md:-translate-y-8">
         <div className="relative w-full max-w-[430px] my-auto">
           
           {/* Card Outer Container */}

@@ -13,7 +13,6 @@ import {
   Loader2,
   CheckCircle2,
   AlertCircle,
-  ShieldAlert,
 } from "lucide-react";
 import { KanzLogo } from "@/components/icons/KanzLogo";
 import {
@@ -87,11 +86,11 @@ export default function StudentLoginPage() {
       <HangingLanterns className="absolute right-8 md:right-24 top-0 z-10 scale-90 md:scale-100 origin-top-right" />
 
       {/* Top Header */}
-      <header className="relative z-20 w-full max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between shrink-0">
+      <header className="relative z-20 w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between shrink-0">
         {/* Brand in Top Left */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-[#f2e6d1] border border-[#d8c8af] flex items-center justify-center shadow-2xs group-hover:bg-[#ebdcbe] transition-colors">
-            <span className="font-serif font-black text-lg text-[#3d2b1f]">ك</span>
+          <div className="w-10 h-10 rounded-xl bg-[#f2e6d1] border border-[#d8c8af] flex items-center justify-center shadow-2xs group-hover:bg-[#ebdcbe] transition-colors">
+            <span className="font-serif font-black text-xl text-[#3d2b1f]">ك</span>
           </div>
           <div className="hidden sm:block">
             <div className="flex items-center gap-1.5 leading-none">
@@ -106,22 +105,14 @@ export default function StudentLoginPage() {
           </div>
         </Link>
 
-        {/* Top Right: Language Selector & Discreet Admin Link */}
-        <div className="flex items-center gap-4 mr-20 md:mr-32">
-          <Link
-            href="/admin"
-            className="hidden md:inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#8c6d31] hover:text-[#5a431c] bg-[#faf5ec] hover:bg-[#f2e7d3] px-2.5 py-1.5 rounded-lg border border-[#e2d5c1] transition-all"
-            title="Administrator Portal"
-          >
-            <ShieldAlert className="w-3.5 h-3.5" />
-            <span>Admin Portal</span>
-          </Link>
+        {/* Top Right: Language Selector Only (Private Admin via direct /admin URL) */}
+        <div className="mr-24 md:mr-36">
           <LanguageSelector />
         </div>
       </header>
 
-      {/* Main Content Area: Left Quote + Center Arched Student Card */}
-      <div className="relative z-20 w-full max-w-6xl mx-auto px-4 md:px-8 flex-1 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 min-h-0">
+      {/* Main Content Area: Left Quote + Center Arched Student Card (Elevated Upwards) */}
+      <div className="relative z-20 w-full max-w-6xl mx-auto px-4 md:px-8 flex-1 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 min-h-0 -translate-y-4 md:-translate-y-8 lg:-translate-y-10">
         
         {/* Left Side: Islamic Calligraphy Quote */}
         <div className="hidden lg:flex flex-col items-start max-w-sm text-left pl-2 select-none">
@@ -147,7 +138,7 @@ export default function StudentLoginPage() {
         </div>
 
         {/* Center: The Iconic Arched Mihrab Student Card */}
-        <div className="relative w-full max-w-[430px] my-auto">
+        <div className="relative w-full max-w-[430px]">
           
           {/* Card Outer Container */}
           <div className="relative bg-[#fffdfa]/95 backdrop-blur-md rounded-t-[44px] rounded-b-[26px] border-2 border-[#e7d8c0] shadow-[0_12px_36px_rgba(61,43,31,0.08)] px-6 py-6 md:px-8 md:py-7 transition-all">
@@ -311,23 +302,12 @@ export default function StudentLoginPage() {
               </a>
             </div>
 
-            {/* Discreet Admin Portal Link */}
-            <div className="text-center mt-2.5 pt-2 border-t border-[#ebdcc7]/60">
-              <Link
-                href="/admin"
-                className="text-[11px] text-[#8c745d] hover:text-[#3d2b1f] hover:underline inline-flex items-center gap-1 transition-colors"
-              >
-                <span>Medresa Administrator?</span>
-                <span className="font-semibold text-[#8c6d31]">Admin Portal →</span>
-              </Link>
-            </div>
-
           </div>
         </div>
       </div>
 
-      {/* Footer Info */}
-      <footer className="relative z-20 w-full py-2.5 text-center text-[11px] text-[#9c8975] select-none shrink-0">
+      {/* Clean, Centered Footer Info */}
+      <footer className="relative z-20 w-full py-4 text-center text-xs text-[#9c8975] select-none shrink-0">
         <p>© {new Date().getFullYear()} Kanz Medresa. All rights reserved.</p>
       </footer>
 
