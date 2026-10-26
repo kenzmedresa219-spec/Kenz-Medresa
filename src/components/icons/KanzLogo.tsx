@@ -16,101 +16,104 @@ export const KanzLogo: React.FC<KanzLogoProps> = ({
 
   return (
     <div className={`flex flex-col items-center justify-center text-center ${className}`}>
-      {/* Icon: Open Book with Crescent and Star */}
-      <div className={`relative ${isLg ? "w-20 h-16" : isSm ? "w-12 h-10" : "w-16 h-12"} mb-1`}>
+      {/* Icon: Open Book with Crescent and Star — correct orientation (pages open upward) */}
+      <div className={`relative ${isLg ? "w-20 h-20" : isSm ? "w-12 h-12" : "w-16 h-16"} mb-1`}>
         <svg
-          viewBox="0 0 100 80"
+          viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-full drop-shadow-sm"
         >
-          {/* Crescent Moon & Star at top */}
-          <g transform="translate(42, 2) scale(0.85)">
-            <path
-              d="M12 2C7 2 3 6.5 3 12C3 17.5 7.5 22 13 22C14.5 22 15.9 21.6 17.1 20.9C13.2 20.3 10.2 16.9 10.2 12.8C10.2 8.7 13.2 5.3 17.1 4.7C15.6 3 13.9 2 12 2Z"
-              fill="#2e1d11"
-            />
-            {/* Star */}
-            <polygon
-              points="19,10 20.2,12.8 23.2,13.1 20.9,15.1 21.6,18 19,16.4 16.4,18 17.1,15.1 14.8,13.1 17.8,12.8"
-              fill="#2e1d11"
-            />
-          </g>
+          {/* ── Open Quran / Book (pages fanning upward, spine at bottom center) ── */}
 
-          {/* Open Quran / Book with layered pages */}
-          {/* Left Wing Pages */}
+          {/* Left Wing Cover (dark brown outer frame) */}
           <path
-            d="M50 36 C42 30, 24 28, 6 34 C4.5 34.5, 4 36, 4 37.5 L4 64 C22 57, 40 59, 50 67 Z"
+            d="M50 62 C42 68, 20 66, 4 58 C3 57.5, 3 56, 3 55 L3 30 C20 38, 42 40, 50 34 Z"
             fill="#3d2b1f"
-            stroke="#2e1d11"
-            strokeWidth="1.5"
+            stroke="#24150c"
+            strokeWidth="1.2"
             strokeLinejoin="round"
           />
+          {/* Left Wing Page (cream/parchment inner page surface) */}
           <path
-            d="M8 38 C24 33, 40 34, 48 40 L48 64 C40 58, 24 57, 8 62 Z"
-            fill="#f7ebd7"
-            opacity="0.85"
+            d="M50 62 C42 68, 22 66, 6 58 L6 32 C22 40, 44 42, 50 36 Z"
+            fill="#f5e8cc"
           />
-          {/* Left page line decorations */}
-          <line x1="14" y1="44" x2="42" y2="39" stroke="#8c7355" strokeWidth="1.2" strokeLinecap="round" />
-          <line x1="14" y1="49" x2="42" y2="44" stroke="#8c7355" strokeWidth="1.2" strokeLinecap="round" />
-          <line x1="14" y1="54" x2="38" y2="50" stroke="#8c7355" strokeWidth="1.2" strokeLinecap="round" />
+          {/* Left page ruled lines */}
+          <line x1="12" y1="52" x2="44" y2="56" stroke="#b09870" strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="12" y1="46" x2="44" y2="50" stroke="#b09870" strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="12" y1="40" x2="44" y2="44" stroke="#b09870" strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="14" y1="34" x2="42" y2="38" stroke="#b09870" strokeWidth="0.9" strokeLinecap="round" />
 
-          {/* Right Wing Pages */}
+          {/* Right Wing Cover (dark brown outer frame) */}
           <path
-            d="M50 36 C58 30, 76 28, 94 34 C95.5 34.5, 96 36, 96 37.5 L96 64 C78 57, 60 59, 50 67 Z"
+            d="M50 62 C58 68, 80 66, 96 58 C97 57.5, 97 56, 97 55 L97 30 C80 38, 58 40, 50 34 Z"
             fill="#3d2b1f"
-            stroke="#2e1d11"
-            strokeWidth="1.5"
+            stroke="#24150c"
+            strokeWidth="1.2"
             strokeLinejoin="round"
           />
+          {/* Right Wing Page (cream/parchment inner page surface) */}
           <path
-            d="M92 38 C76 33, 60 34, 52 40 L52 64 C60 58, 76 57, 92 62 Z"
-            fill="#f7ebd7"
-            opacity="0.85"
+            d="M50 62 C58 68, 78 66, 94 58 L94 32 C78 40, 56 42, 50 36 Z"
+            fill="#f5e8cc"
           />
-          {/* Right page line decorations */}
-          <line x1="86" y1="44" x2="58" y2="39" stroke="#8c7355" strokeWidth="1.2" strokeLinecap="round" />
-          <line x1="86" y1="49" x2="58" y2="44" stroke="#8c7355" strokeWidth="1.2" strokeLinecap="round" />
-          <line x1="86" y1="54" x2="62" y2="50" stroke="#8c7355" strokeWidth="1.2" strokeLinecap="round" />
+          {/* Right page ruled lines */}
+          <line x1="88" y1="52" x2="56" y2="56" stroke="#b09870" strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="88" y1="46" x2="56" y2="50" stroke="#b09870" strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="88" y1="40" x2="56" y2="44" stroke="#b09870" strokeWidth="1.1" strokeLinecap="round" />
+          <line x1="86" y1="34" x2="58" y2="38" stroke="#b09870" strokeWidth="0.9" strokeLinecap="round" />
 
-          {/* Center Book Spine */}
+          {/* Center Spine (binding at bottom-center) */}
           <path
-            d="M48 37 C49.5 35, 50.5 35, 52 37 L52 68 C50.5 66.5, 49.5 66.5, 48 68 Z"
-            fill="#24170d"
+            d="M48 35 C49.2 33, 50.8 33, 52 35 L52 64 C50.8 62.5, 49.2 62.5, 48 64 Z"
+            fill="#1d1208"
           />
-          {/* Golden Bookmark Ribbon */}
+
+          {/* Gold Bookmark ribbon hanging from spine bottom */}
           <path
-            d="M50 67 Q47 73 50 78 Q53 73 50 67"
-            stroke="#b8860b"
-            strokeWidth="2"
-            fill="none"
+            d="M50 65 Q47.5 71 50 76 Q52.5 71 50 65"
+            fill="#c8a73e"
+            stroke="#a88a2a"
+            strokeWidth="0.8"
+          />
+
+          {/* ── Crescent Moon & Star floating above the open book ── */}
+          {/* Crescent */}
+          <path
+            d="M52 18 C47.5 18, 44 21.8, 44 26.5 C44 31.2, 47.7 35, 52.5 35 C53.7 35, 54.8 34.7, 55.8 34.1 C52.5 33.6, 50 30.6, 50 27 C50 23.4, 52.5 20.4, 55.8 19.9 C54.6 18.7, 53.4 18, 52 18 Z"
+            fill="#3d2b1f"
+          />
+          {/* 5-pointed Star beside crescent */}
+          <polygon
+            points="59,19 60,21.8 63,22 60.8,24 61.5,27 59,25.5 56.5,27 57.2,24 55,22 58,21.8"
+            fill="#3d2b1f"
           />
         </svg>
       </div>
 
       {/* Arabic Calligraphy "كنز" */}
       <h1
-        className={`font-serif font-black tracking-wide text-[#2e1d11] select-none ${
-          isLg ? "text-4xl" : isSm ? "text-2xl" : "text-3xl"
+        className={`font-serif font-black tracking-wide text-[#2e1d11] select-none leading-none ${
+          isLg ? "text-4xl mt-1" : isSm ? "text-2xl" : "text-3xl mt-0.5"
         }`}
-        style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', serif" }}
+        style={{ fontFamily: "'Scheherazade New', 'Amiri', 'Traditional Arabic', Georgia, serif" }}
       >
         كـنـز
       </h1>
 
-      {/* Latin Title "Kanz" */}
+      {/* Latin Title "KANZ" */}
       <h2
-        className={`font-semibold tracking-[0.2em] text-[#3d2b1f] uppercase select-none ${
-          isLg ? "text-lg" : isSm ? "text-xs" : "text-base"
+        className={`font-bold tracking-[0.25em] text-[#3d2b1f] uppercase select-none leading-none ${
+          isLg ? "text-lg mt-0.5" : isSm ? "text-[10px]" : "text-sm mt-0.5"
         }`}
       >
-        Kanz
+        KANZ
       </h2>
 
       {/* Subtitle */}
       {showSubtitle && (
-        <p className="text-[10px] md:text-[11px] tracking-wider text-[#79634e] uppercase font-medium mt-0.5 select-none">
+        <p className="text-[10px] tracking-wider text-[#79634e] uppercase font-medium mt-0.5 select-none whitespace-nowrap">
           Islamic Knowledge • A Better You
         </p>
       )}
